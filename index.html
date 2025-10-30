@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: linear-gradient(135deg, #141e30, #243b55);
+        /* color: white; */
+      }
+
+      .product-card {
+        width: 280px;
+        padding: 20px;
+      }
+
+      .product-card:hover .image-price {
+        transform: scale(1.1);
+      }
+      .product-card img {
+        cursor: pointer;
+        width: 100%;
+        height: 300px;
+      }
+
+      .price {
+        font-size: 20px;
+        margin-bottom: 8px;
+        margin-top: 20px;
+        font-weight: 800;
+          color: #e74c3c;
+      }
+      .price{
+        display: flex;
+        justify-content: space-between;
+      }
+      .price .old{
+        text-decoration:line-through;
+      }
+      .title {
+        font-size: 18px;
+        width: 100%;
+        color: white;
+        overflow: hidden;
+        white-space: nowrap;
+        /* position: relative; */
+      }
+
+      .btn {
+        background-color: #3289df;
+        padding: 12px 20px;
+        font-size: 18px;
+        width: 100%;
+        border: none;
+        border-radius: 8px;
+        color: white;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        cursor: pointer;
+      }
+      .btn:hover {
+        box-shadow: 0px 4px 8px grey;
+        /* background: linear-gradient(135deg, #fbc2eb, #a6c1ee); */
+      }
+      .icon {
+        width: 18px;
+        height: 18px;
+        color: #f9f9f9;
+        transition: transform 0.3s ease;
+      }
+
+      .btn:hover .icon {
+        transform: scale(1.3);
+      }
+      .product-grid {
+        display: grid;
+        /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        justify-items: center;
+      }
+      .image-price {
+        position: relative;
+        width: 100%;
+        transition: 0.5s all;
+        transition: transform 1s ease-in-out;
+      }
+      .discount-price {
+        background-color: rgb(242, 11, 11);
+        padding: 4px 18px;
+        border-radius: 8px;
+      }
+      .image-price img {
+        display: block;
+        width: 100%;
+        border-radius: 10px;
+      }
+      .discount-price {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: #d34131;
+        color: white;
+        padding: 6px 12px;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: bold;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+      }
+      .marquee:hover {
+        animation-play-state: paused;
+      }
+      .marquee {
+        display: inline-block;
+        padding-left: 100%;
+        animation: scrollText 20s linear infinite;
+      }
+      @keyframes scrollText {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+      @media (max-width: 500px) {
+        .product-grid {
+          grid-template-columns: 1fr;
+          justify-items: center;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="image-price">
+          <img
+            src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png"
+            alt="Product image"
+          />
+          <span class="discount-price">30% OFF</span>
+        </div>
+        <p class="price">
+            <span class="old">$100.99</span>
+            <span class="new">$70.69</span>
+        </p>
+        <p class="title">
+          <span class="">Backpack</span>
+        </p>
+        <button class="btn">
+          <i data-lucide="shopping-cart" class="icon"></i> Add to cart
+        </button>
+      </div>
+      <div class="product-card">
+        <div class="image-price">
+          <img
+            src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_t.png"
+            alt="Product image"
+          />
+          <span class="discount-price">20% OFF</span>
+        </div>
+
+        <p class="price">
+            <span class="old">$22.3</span>
+            <span class="new">$17.84</span>
+        </p>
+        <p class="title">
+          <span class="marquee">Mens Casual Premium Slim Fit T-Shirts</span>
+        </p>
+        <button class="btn">
+          <i data-lucide="shopping-cart" class="icon"></i> Add to cart
+        </button>
+      </div>
+      <div class="product-card">
+        <div class="image-price">
+          <img
+            src="https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_t.png"
+            alt="Product image"
+          />
+          <span class="discount-price">15% OFF</span>
+        </div>
+
+        <p class="price">
+            <span class="old">$55.99</span>
+            <span class="new">$39.19</span>
+        </p>
+        <p class="title">Mens Cotton Jacket</p>
+        <button class="btn">
+          <i data-lucide="shopping-cart" class="icon"></i> Add to cart
+        </button>
+      </div>
+      <div class="product-card">
+        <div class="image-price">
+          <img
+            src="https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_t.png"
+            alt="Product image"
+          />
+          <span class="discount-price">30% OFF</span>
+        </div>
+
+        <p class="price">
+            <span class="old">$15.99</span>
+            <span class="new">$11.19</span>
+        </p>
+        <p class="title">Mens Casual Slim Fit</p>
+        <button class="btn">
+          <i data-lucide="shopping-cart" class="icon"></i> Add to cart
+        </button>
+      </div>
+      <div class="product-card">
+        <div class="image-price">
+          <img
+            src="https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_t.png"
+            alt="Product image"
+          />
+          <span class="discount-price">30% OFF</span>
+        </div>
+
+        <p class="price">
+            <span class="old">$695</span>
+            <span class="new">$486.50</span>
+        </p>
+        <p class="title">
+          <span class="marquee">
+            John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain
+            Bracelet
+          </span>
+        </p>
+        <button class="btn">
+          <i data-lucide="shopping-cart" class="icon"></i> Add to cart
+        </button>
+      </div>
+      <div class="product-card">
+        <div class="image-price">
+          <img
+            src="https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_t.png"
+            alt="Product image"
+          />
+          <span class="discount-price">30% OFF</span>
+        </div>
+        <p class="price">
+            <span class="old">$168</span>
+            <span class="new">$117.60</span>
+        </p>
+        <p class="title">Solid Gold Petite Micropave</p>
+        <button class="btn">
+          <i data-lucide="shopping-cart" class="icon"></i> Add to cart
+        </button>
+      </div>
+      <div class="product-card">
+       <div class="image-price">
+         <img
+          src="https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_t.png"
+          alt="Product image"
+        />
+        <span class="discount-price">30% OFF</span>
+       </div>
+        <p class="price">
+            <span class="old">$9.99</span>
+            <span class="new">$6.99</span>
+        </p>
+        <p class="title">White Gold Plated Princess</p>
+        <button class="btn">
+          <i data-lucide="shopping-cart" class="icon"></i> Add to cart
+        </button>
+      </div>
+      <div class="product-card">
+       <div class="image-price">
+         <img
+          src="https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_t.png"
+          alt="Product image"
+        />
+        <span class="discount-price">50% OFF</span>
+       </div>
+        <p class="price">
+            <span class="old">$10.99</span>
+            <span class="new">$5.50</span>
+        </p>
+        <p class="title">
+          <span class="marquee"
+            >Pierced Owl Rose Gold Plated Stainless Steel Double</span
+          >
+        </p>
+        <button class="btn">
+          <i data-lucide="shopping-cart" class="icon"></i> Add to cart
+        </button>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
