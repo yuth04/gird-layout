@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Detial</title>
+    <link rel="stylesheet" href="./productDetial.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="product-img">
+        <a href="index.html"
+          ><i class="icon" data-lucide="arrow-left"></i>Back</a
+        >
+        <img
+          src="https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_t.png"
+          alt=""
+        />
+      </div>
+      <div class="product-detial">
+        <h3>Mens Cotton Jacket</h3>
+        <div class="rate">
+          ★★★★★<span style="color: rgb(255, 255, 47)">(259 reviews)</span>
+        </div>
+        <p class="price">$39.19</p>
+        <p class="description">
+          great outerwear jackets for Spring/Autumn/Winter, suitable for many
+          occasions, such as working, hiking, camping, mountain/rock climbing,
+          cycling, traveling or other outdoors. Good gift choice for you or your
+          family member. A warm hearted love to Father, husband or son in this
+          thanksgiving or Christmas Day.
+        </p>
+
+        <div class="quantity">
+          <label for="qty">Quantity:</label>
+          <input type="number" id="qty" />
+        </div>
+        <div class="btn-group">
+          <button class="add-to-cart">
+            <i data-lucide="shopping-cart" class="icon"></i>Add to Cart
+          </button>
+          <button class="buy-now">
+            <i data-lucide="dollar-sign" class="icon"></i>Buy Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</html>
