@@ -1,54 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product Detial</title>
-    <link rel="stylesheet" href="./productDetial.css" />
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="./productDetial.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        window.onload = () => {
+            lucide.createIcons();
+        };
+    </script>
+</head>
+<body>
+
+    <!-- Main Container -->
     <div class="container">
-      <div class="product-img">
-        <a href="index.html"
-          ><i class="icon" data-lucide="arrow-left"></i>Back</a
-        >
-        <img
-          src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_t.png"
-          alt=""
-        />
-      </div>
-      <div class="product-detial">
-        <h3>Mens Casual Premium Slim Fit T-Shirts</h3>
-        <div class="rate">
-          ★★★★★<span style="color: rgb(255, 255, 47)">(259 reviews)</span>
+        <div class="product-img">         
+            <a href="./index.html" class="back-link">
+                <i data-lucide="arrow-left" class="icon"></i>
+                Back to Store
+            </a>
+            <img 
+                src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_t.png"
+                alt="Product Image: Premium Slim Fit T-Shirt"
+                class="product-image"
+            >
         </div>
-        <p class="price">$17.84</p>
-        <p class="description">
-          Slim-fitting style, contrast raglan long sleeve, three-button henley
-          placket, light weight & soft fabric for breathable and comfortable
-          wearing. And Solid stitched shirts with round neck made for durability
-          and a great fit for casual fashion wear and diehard baseball fans. The
-          Henley style round neckline includes a three-button placket.
-        </p>
-
-        <div class="quantity">
-          <label for="qty">Quantity:</label>
-          <input type="number" id="qty" />
+        <!-- Product Detail Section -->
+        <div class="product-detial">
+            <h3 class="title">
+                Mens Casual Premium Slim Fit T-Shirts
+            </h3>
+            <div class="price">
+                $17.84
+            </div>
+            <div class="rate">
+                <div class="stars">
+                    <!-- 5 Stars -->
+                    <i data-lucide="star" class="star fill"></i>
+                    <i data-lucide="star" class="star fill"></i>
+                    <i data-lucide="star" class="star fill"></i>
+                    <i data-lucide="star" class="star fill"></i>
+                    <i data-lucide="star-half" class="star fill"></i>
+                </div>
+                <span class="review-count">(259 reviews)</span>
+            </div>
+            <div class="description">
+                Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.
+            </div>
+            <div class="quantity">
+                <label for="qty">Quantity:</label>
+                <input 
+                    type="number" 
+                    id="qty" 
+                    value="1" 
+                    min="1" 
+                    class="qty-input"
+                >
+            </div>
+            <!-- Button Group -->
+            <div class="btn-group">
+                
+                <button class="add-to-cart">
+                    <i data-lucide="shopping-cart" class="icon"></i>
+                    Add to Cart
+                </button>
+                <button class="buy-now">
+                    <i data-lucide="zap" class="icon"></i>
+                    Buy Now
+                </button>
+            </div>
         </div>
-        <div class="btn-group">
-          <button class="add-to-cart">
-            <i data-lucide="shopping-cart" class="icon"></i>Add to Cart
-          </button>
-          <button class="buy-now">
-            <i data-lucide="dollar-sign" class="icon"></i>Buy Now
-          </button>
-        </div>
-      </div>
     </div>
-  </body>
-
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script>
-    lucide.createIcons();
-  </script>
+</body>
 </html>
